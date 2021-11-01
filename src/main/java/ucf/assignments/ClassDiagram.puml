@@ -1,0 +1,71 @@
+@startuml
+
+class ListOfLists
+{
+    -ArrayList<ToDoList> listOfLists
+    -int nList
+
+    +ListOfLists()
+    +ToDoList addList()
+    -int findList(String name)
+    +int removeList(String name)
+    +String editListTitle(String name, String newTitle)
+    +Item addListItem(String name)
+    +int removeListItem(String listName, String itemName)
+    +String editListItemDescription(String listName, String itemName, String newDescription)
+    +String editListItemDueDate(String listName, String itemName, String newDueDate)
+    +int markListItemComplete(String listName, String itemName)
+    +int displayListAllItem(String listName)
+    +int displayListIncompleteItem(String listName)
+    +int displayListCompleteItem(String listName)
+    +String listSaveList()
+    +String saveAllLists()
+    +String listLoadSingleList()
+    +String listLoadMultipleLists()
+}
+
+class ToDoList
+{
+    -String title
+    -int nItem
+    -ArrayList<Item> itemList
+
+    +ToDoList()
+    +String getTitle()
+    +void setTitle(String title)
+    +int getnItem()
+    +void setnItem(int nItem)
+    +ArrayList<Item> getItemList()
+    +void setItemList(ArrayList<Item> itemList)
+    -int findItem(String name)
+    +Item addItem()
+    +int removeItem(String name)
+    +String editItemDescription(String name, String newDescription)
+    +String editItemDueDate(String name, String newDueDate)
+    +int markComplete(String name)
+    +int displayAllItem()
+    +int displayIncompleteItem()
+    +int displayCompleteItem()
+}
+
+class Item
+{
+    -String name;
+    -String description;
+    -String dueDate;
+    -int status;
+
+    public Item()
+    public String getName()
+    public void setName(String name)
+    public String getDescription()
+    public void setDescription(String description)
+    public String getDueDate()
+    public void setDueDate(String dueDate)
+    public int getStatus()
+    public void setStatus(int status)
+}
+
+Item -> ToDoList
+ToDoList -> ListOfLists
+@enduml
