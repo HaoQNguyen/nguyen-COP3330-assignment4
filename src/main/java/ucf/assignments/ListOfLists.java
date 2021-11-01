@@ -136,4 +136,81 @@ public class ListOfLists {
 
         return 0;
     }
+
+    public String listSaveList()
+    {
+        /*
+            int ind = findList(name)
+            return listOfLists[ind].saveList();
+         */
+        return "";
+    }
+
+    public String saveAllLists()
+    {
+        /*
+            Scanner input = new Scanner(System.in)
+            String path = input.nextLine()
+            String name = input.next()
+
+            try
+            {
+                FileWriter output = new FileWriter(path + name)
+                for i = 0:listOfLists.size()
+
+                    ToDoList list = listOfLists[i]
+
+                    for j = 0:list.itemList.size()
+                        output.write(itemList[j].item.getName + itemList[j].item.getDescription + itemList[j].item.getDueDate + itemList[j].item.Status)
+                return "Successfully saved"
+            } catch (Exception e)
+            {
+                return "Fail to create output file"
+            }
+         */
+        return "";
+    }
+
+    public String listLoadSingleList()
+    {
+        /*
+            Scanner input = new Scanner(System.in)
+            String path = input.nextLine()
+            ToDoList newList = new ToDoList()
+
+            try
+            {
+                newList = parseFile(path)
+                listOfLists.add(newList)
+                return "Successfully load list"
+            } catch (Exception e)
+            {
+                return "Failed to load input file"
+            }
+         */
+        return "";
+    }
+
+    public String listLoadMultipleLists()
+    {
+        /*
+            Scanner input = new Scanner(System.in)
+            String path = input.nextLine()
+            ToDoList newList = new ToDoList()
+
+            while (path.hasNextLine())
+            {
+                try
+                {
+                    newList = parseFile(path)
+                    listOfLists.add(newList)
+                } catch (Exception e)
+                {
+                    return "Failed to load input file completely"
+                }
+            }
+            return "Successfully loaded input file"
+         */
+        return "";
+    }
 }
