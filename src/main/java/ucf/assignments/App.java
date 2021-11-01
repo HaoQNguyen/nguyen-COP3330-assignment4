@@ -3,6 +3,9 @@
  *  Copyright 2021 Hao Nguyen
  */
 
+// link to Figma GUI mockup
+// https://www.figma.com/file/3qZjCsRGFItILLZ14lBQ7a/GUI-Mockup
+
 package ucf.assignments;
 
 public class App {
